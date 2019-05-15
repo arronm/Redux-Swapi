@@ -19,7 +19,7 @@ export const starWarsFetch = () => dispatch => {
     .catch(error => {
       dispatch({
         type: FETCH_FAIL,
-        payload: error,
+        payload: error.response,
       });
     });
 }

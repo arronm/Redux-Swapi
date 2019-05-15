@@ -20,6 +20,15 @@ class CharacterListView extends React.Component {
         </ul>
       )
     }
+
+    if (this.props.error) {
+      return (
+        <ul>
+          <li>{`Error: ${this.props.error.status} ${this.props.error.statusText}`}</li>
+        </ul>
+      )
+    }
+
     return (
       <div className="CharactersList_wrapper">
         <CharacterList characters={this.props.characters} />
